@@ -1,0 +1,29 @@
+<div id="<%= dom_id publication %>">
+  <p>
+    <strong>Name:</strong>
+    <%= publication.name %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= publication.content %>
+  </p>
+
+  <p>
+    <strong>Tag:</strong>
+    <%= publication.tag_id %>
+    <%# <% @tags.each do |t| %>
+    <%#= t.name if publication.tag_id == t.id %> 
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= publication.user_id %>
+  </p>
+
+<% if publication.foto.attached? %>
+  <%= image_tag publication.foto, class: "foto-publication" %>
+  <% end %>
+</div>
+
+
